@@ -1,0 +1,165 @@
+//---------------
+@font-face {
+    font-family: 'TulMono';
+    src: url('fonts/TulMono/TULMono-Regular.ttf');
+}
+@font-face {
+    font-family: 'TulMono-Bold';
+    src: url('fonts/TulMono/TULMono-Bold.ttf');
+}
+@font-face {
+    font-family: 'TulMono-Hairline';
+    src: url('fonts/TulMono/TULMono-Hairline.ttf');
+}
+@font-face {
+    font-family: 'TulMono-SingleLine';
+    src: url('fonts/TulMono/TULMono-SingleLine.ttf');
+}
+
+@mixin tul24Regular{
+    font-family: 'TulMono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+@mixin tul72{
+    font-family: 'TulMono';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 72px;
+    line-height: 82px;
+}
+
+@mixin tul40Regular{
+    font-family: 'TulMono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+}
+
+//----------------
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope/Manrope-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Manrope-ExtraLight';
+    src: url('fonts/Manrope/static/Manrope-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Manrope-Light';
+    src: url('fonts/Manrope/static/Manrope-Light.ttf');
+}
+@font-face {
+    font-family: 'Manrope-Regular';
+    src: url('fonts/Manrope/static/Manrope-Regular.ttf');
+}
+@font-face {
+    font-family: 'Manrope-Medium';
+    src: url('fonts/Manrope/static/Manrope-Medium.ttf');
+}
+  
+@font-face {
+    font-family: 'Syne-Bold';
+    src: url('fonts/Syne/static/Syne-Bold.ttf');
+}
+
+@mixin manrope155{
+    font-family: 'Manrope-ExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 155px;
+    line-height: 165px;
+    color: #00103A;
+}
+@mixin manrope72{
+    font-family: 'Manrope-ExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 72px;
+    line-height: 82px;
+}
+@mixin manrope40{
+    font-family: 'Manrope-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+    color: #00103A;
+}
+@mixin manrope24Light{
+    font-family: 'Manrope-Light';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: #00103A;
+}
+@mixin manrope24Regular{
+    font-family: 'Manrope-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #00103A;
+}
+@mixin manrope24Medium{
+    font-family: 'Manrope-Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: #00103A;
+}
+@mixin manrope18{
+    font-family: 'Manrope-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 48px;
+    color: #00103A;
+}
+@mixin manrope14{
+    font-family: 'Manrope-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #00103A;
+}
+@mixin manrope16{
+    font-family: 'Manrope-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #00103A;
+}
+
+@mixin syne14{
+    font-family: 'Syne-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #01073C;
+}
+@mixin syne16{
+    font-family: 'Syne-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #00103A;
+}
+
+@mixin gradientText {
+    background: radial-gradient(109.91% 2942.09% at 77.17% 0%, #7B51F1 0%, #47EDCF 73.35%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // background-clip: text;
+    // text-fill-color: transparent;
+}

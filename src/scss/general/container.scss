@@ -1,0 +1,27 @@
+section {
+    position: relative;
+}
+
+.container {
+    max-width: 1330px;
+    // @include windowMax2048p(){
+    //     max-width: 1224px;
+    // }
+    // @include windowMax1920p(){
+    //     max-width: 1224px;
+    // }
+    @include windowMax1440p(){
+        max-width: 1100px;
+        padding: 0 48px 0 48px;
+    }
+    @include mobileMax768p(){
+        // $container-width: calc(100VW-80px);
+        max-width: calc(100VW - 48px);
+        padding: 0;
+    
+    }
+    
+    margin: 0 auto 0 auto;
+    // background-color: yellowgreen;
+    overflow: hidden;
+}

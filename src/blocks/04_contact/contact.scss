@@ -1,0 +1,13 @@
+.contact {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: aqua;
+    .map_cont{
+        position: absolute;
+        background-image: url("images/content/tulab_A_map.png");
+        background-size: auto;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;   
+    }
+}

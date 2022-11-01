@@ -1,0 +1,35 @@
+@mixin windowMax2048p{
+    @media (min-width: 1921px){
+        @content;
+    }
+}
+
+@mixin windowMax1920p{
+    @media (min-width: 1441px) and (max-width: 1920px){
+        @content;
+    }
+}
+
+@mixin windowMax1440p{
+    @media (min-width: 768px) and (max-width: 1440px){
+        @content;
+    }
+}
+
+// @mixin windowMax1366p{
+//     @media (min-width: 768px) and (max-width: 1366px){
+//         @content;
+//     }
+// }
+
+// @mixin windowMax1280p{
+//     @media (min-width: 768px) and (max-width: 1280px){
+//         @content;
+//     }
+// }
+
+@mixin mobileMax768p{
+    @media (max-width: 769px){
+        @content;
+    }
+}

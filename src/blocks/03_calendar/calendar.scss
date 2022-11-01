@@ -1,0 +1,13 @@
+.calendar{
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    iframe{
+        filter: invert(.9) saturate(0.5) hue-rotate(145deg);
+        border: 0;
+        width: 800px; 
+        height: 600px;
+    }
+}

@@ -1,0 +1,5 @@
+/*! purgecss start ignore */
+@import "general/*.scss"; //Preprocessors, fonts, variables (doesn’t generate any style output)
+@import "../blocks/**/*.scss"; //Majority of code goes here to style specific blocks
+@import "../fonts/*.scss"; //Majority of code goes here to style specific blocks
+/*! purgecss end ignore */

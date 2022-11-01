@@ -1,0 +1,1 @@
+window.onload = window.onresize = ()=> { gsap.set('#map_cont', {}); }
