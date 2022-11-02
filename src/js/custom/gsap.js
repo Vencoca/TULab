@@ -1,1 +1,1 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);

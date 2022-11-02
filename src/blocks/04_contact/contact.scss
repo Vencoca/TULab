@@ -2,12 +2,17 @@
     width: 100%;
     height: calc(100vh - 80px);
     background-color: aqua;
+    overflow: hidden;
+    position: relative;
+
     .map_cont{
         position: absolute;
-        background-image: url("images/content/tulab_A_map.png");
+        background-image: url("images/content/8kLib.png");
         background-size: auto;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;   
+        width: 5379px;
+        height: 2442px;
+        left: -1660px;
+        top: -670px;
     }
 }

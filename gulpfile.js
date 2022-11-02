@@ -151,12 +151,6 @@ function scriptsUglify() {
 		.pipe(uglify())
 		.pipe(gulp.dest(themePath + 'js/'));
 };
-function scriptsJQuery() {
-	return gulp
-		.src("src/js/jquery.js")
-		.pipe(gulp.dest('build/js/'))
-		.pipe(gulp.dest(themePath + 'js/'));
-};
 //Nunjuck includes
 function njkIncludes() {
   return gulp
@@ -188,7 +182,7 @@ function tinyPngBg() {
 	return gulp
 		.src("src/images/bg/*.{png,jpg}")
 		.pipe(newer("build/images/bg"))
-		.pipe(tinypng("lTgFxq2zS62JyG15cHC1f1kBLGnCxvSV"))
+		.pipe(tinypng("gkf0LVGnNtnTFxSLfxLz0Kq29vKFQMwK"))
 		.pipe(gulp.dest("build/images/bg"))
 		.pipe(gulp.dest(themePath + 'images/bg'));
 };
@@ -196,29 +190,37 @@ function tinyPngFavicon() {
 	return gulp
 		.src("src/images/favicon/*.{png,jpg}")
 		.pipe(newer("build/images/favicon"))
-		.pipe(tinypng("lTgFxq2zS62JyG15cHC1f1kBLGnCxvSV"))
+		.pipe(tinypng("gkf0LVGnNtnTFxSLfxLz0Kq29vKFQMwK"))
 		.pipe(gulp.dest("build/images/favicon"))
 		.pipe(gulp.dest(themePath + 'images/favicon'));
 };
 function tinyPngContent() {
 	return gulp
-		.src(["src/images/content/*.{png,jpg}"])
+		.src(["./src/images/content/*.{png,jpg}"])
 		.pipe(newer("build/images/content"))
-		.pipe(tinypng("lTgFxq2zS62JyG15cHC1f1kBLGnCxvSV"))
+		.pipe(tinypng("gkf0LVGnNtnTFxSLfxLz0Kq29vKFQMwK"))
 		.pipe(gulp.dest("build/images/content"));
 };
 // Webp images
 function webpImages() {
 	return gulp
-		.src(['src/images/bg/*.{png,jpg}'])
+		.src(['./src/images/bg/*.{png,jpg}'])
 		.pipe(webp())
 		.pipe(gulp.dest("build/images/bg"))
 		.pipe(gulp.dest(themePath + 'images/bg'));
 };
+//video
+function copyImages(){
+	return gulp
+		.src('./src/images/**')
+		.pipe(gulp.dest('build/images/'))
+		.pipe(gulp.dest(themePath + 'images/'));
+}
+
 //SVG
 function svgMin() {
 	return gulp
-		.src(["src/images/**/*.svg", "!src/images/ico/*.svg"])
+		.src(["./src/images/**/*.svg", "!./src/images/ico/*.svg"])
 		.pipe(newer("build/images"))
 		.pipe(
 			svgo({
@@ -237,8 +239,9 @@ function svgMin() {
 		.pipe(gulp.dest(themePath + 'images/'));
 };
 function svgStore() {
+	
   return gulp
-      .src('src/images/ico/*.svg')
+      .src('./src/images/ico/*.svg')
       .pipe(svgmin(function (file) {
           var prefix = path.basename(file.relative, path.extname(file.relative));
           return {
@@ -269,14 +272,14 @@ function svgStore() {
 //Favicons other files
 function faviconsFiles() {
 	return gulp
-		.src(["src/images/favicon/*", "!src/images/favicon/*.{png,jpg,svg}"])
+		.src(["./src/images/favicon/*", "!src/images/favicon/*.{png,jpg,svg}"])
 		.pipe(gulp.dest('build/images/favicon/'))
 		.pipe(gulp.dest(themePath + 'images/favicon/'));
 };
 //Copy fonts
 function copyFonts() {
 	return gulp
-		.src('src/fonts/**')
+		.src('./src/fonts/**')
 		.pipe(gulp.dest('build/fonts/'))
 		.pipe(gulp.dest(themePath + 'fonts/'));
 };
@@ -304,6 +307,7 @@ function watchFiles() {
     ['build/*.css', 'build/*.html', 'build/js/*.js'],
     gulp.series(browserSyncReload)
   );
+
   gulp.watch('src/fonts/**', copyFonts).on('unlink', function (filepath) {
     var filePathFromSrc = path.relative(path.resolve('src/fonts'), filepath);
     var destFilePath = path.resolve('build/fonts', filePathFromSrc);
@@ -311,6 +315,7 @@ function watchFiles() {
 		del.sync(destFilePath);
 		del.sync(destFilePathTheme, {force: true});
   });
+
   gulp.watch('src/images/content/*.{png,jpg}', tinyPngContent).on('unlink', function (filepath) {
     var filePathFromSrc = path.relative(path.resolve('src/images/content'), filepath);
     var destFilePath = path.resolve('build/images/content/', filePathFromSrc);
@@ -367,7 +372,10 @@ gulp.task(
       ),
       gulp.series(
         njkIncludes, htmlBeauty
-      )
+      ),
+	  gulp.series(
+		copyFonts,copyImages
+	  )
     ),
     gulp.parallel(
       watchFiles, browserSync

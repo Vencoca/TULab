@@ -1,23 +1,17 @@
 header{
-    --blue-color: #36424e;
-    --dark-green-color: #3c7072;
-    --light-green-color: #498989;
-    --red-color: #e53c49;
-    --red-color-darker: #a82832;
-    --white-color: #f5f6f7;
     --logo-size: 90px;
   }
 
 .active{
     cursor: pointer;
     font-size: 14px;
-    color: var(--red-color) !important;
-    border-color: var(--red-color) !important;
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
 }
   
   .header {
     @include tul24Regular();
-    background-color: var(--blue-color);
+    background-color: var(--main-color);
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -56,7 +50,7 @@ header{
   
   .link{
     font-weight: 500;
-    color: #fff;
+    color: var(--white-color);
     list-style: none;
     text-decoration: none;
     font-size: 18px;
@@ -66,8 +60,8 @@ header{
   
     &:hover{
       cursor: pointer;
-      color: var(--red-color);
-      border-color: var(--red-color);
+      color: var(--accent-color);
+      border-color: var(--accent-color);
     }
   }  
   
