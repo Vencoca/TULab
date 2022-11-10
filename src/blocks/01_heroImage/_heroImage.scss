@@ -16,7 +16,7 @@
         @include tul72();
         color: white;
         text-align: center;
-        text-shadow: 4px 4px 2px rgb(0, 0, 0);
+        text-shadow: 4px 4px 2px var(--main-color);
         position: relative;
     }
 /*

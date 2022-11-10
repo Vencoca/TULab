@@ -1,19 +1,27 @@
 //---------------
 @font-face {
     font-family: 'TulMono';
-    src: url('fonts/TulMono/TULMono-Regular.ttf');
+    src: url('./fonts/TULMono/TULMono-Regular.ttf');
 }
 @font-face {
     font-family: 'TulMono-Bold';
-    src: url('fonts/TulMono/TULMono-Bold.ttf');
+    src: url('./fonts/TULMono/TULMono-Bold.ttf');
 }
 @font-face {
     font-family: 'TulMono-Hairline';
-    src: url('fonts/TulMono/TULMono-Hairline.ttf');
+    src: url('./fonts/TULMono/TULMono-Hairline.ttf');
 }
 @font-face {
     font-family: 'TulMono-SingleLine';
-    src: url('fonts/TulMono/TULMono-SingleLine.ttf');
+    src: url('./fonts/TULMono/TULMono-SingleLine.ttf');
+}
+
+@mixin tul16Regular{
+    font-family: 'TulMono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
 }
 
 @mixin tul24Regular{
@@ -43,28 +51,28 @@
 //----------------
 @font-face {
     font-family: 'Manrope';
-    src: url('fonts/Manrope/Manrope-VariableFont_wght.ttf');
+    src: url('./fonts/Manrope/Manrope-VariableFont_wght.ttf');
 }
 @font-face {
     font-family: 'Manrope-ExtraLight';
-    src: url('fonts/Manrope/static/Manrope-ExtraLight.ttf');
+    src: url('./fonts/Manrope/static/Manrope-ExtraLight.ttf');
 }
 @font-face {
     font-family: 'Manrope-Light';
-    src: url('fonts/Manrope/static/Manrope-Light.ttf');
+    src: url('./fonts/Manrope/static/Manrope-Light.ttf');
 }
 @font-face {
     font-family: 'Manrope-Regular';
-    src: url('fonts/Manrope/static/Manrope-Regular.ttf');
+    src: url('./fonts/Manrope/static/Manrope-Regular.ttf');
 }
 @font-face {
     font-family: 'Manrope-Medium';
-    src: url('fonts/Manrope/static/Manrope-Medium.ttf');
+    src: url('./fonts/Manrope/static/Manrope-Medium.ttf');
 }
   
 @font-face {
     font-family: 'Syne-Bold';
-    src: url('fonts/Syne/static/Syne-Bold.ttf');
+    src: url('./fonts/Syne/static/Syne-Bold.ttf');
 }
 
 @mixin manrope155{

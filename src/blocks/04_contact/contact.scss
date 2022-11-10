@@ -4,15 +4,19 @@
     background-color: aqua;
     overflow: hidden;
     position: relative;
-
+    #scrollDist{
+        position: absolute;
+    }
     .map_cont{
         position: absolute;
-        background-image: url("images/content/8kLib.png");
-        background-size: auto;
-        background-repeat: no-repeat;
-        width: 5379px;
-        height: 2442px;
-        left: -1660px;
-        top: -670px;
+        svg{
+            position: absolute;
+        }
+        img{
+            position: absolute;
+        }
+        //background-image: url("images/content/8kLib.png");
+        //background-size: auto;
+        //background-repeat: no-repeat;
     }
 }

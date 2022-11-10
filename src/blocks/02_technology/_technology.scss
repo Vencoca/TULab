@@ -1,80 +1,91 @@
 .technology {
     width: 100%;
-    height: calc(100vh - 80px);
-    background-color: cadetblue;
-}
-
-/*
-.bigHeadline {
-    width: 100%;
-    height: 100vh;
-    // background-color: aqua;
-
+    min-height: calc(100vh - 80px);
+    //background-color: cadetblue;
     .container{
-        height: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: relative;
-    }
-
-    h2 {
-        @include manrope155();
-        @include windowMax1440p(){
-            font-size: 128px;
-            line-height: 135px;
+        flex-flow: row wrap;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        @media (max-width: 550px) {
+          padding-top: 0px;
+          flex-direction: column;
         }
-        width: 100%;
-        // white-space: nowrap;
-        &:first-of-type{
-            text-align: left;
-        }
-        &:last-of-type{
-            text-align: right;
-        }
-        span {
-            @include gradientText();
-        }
-    }
-
-    p {
-        @include manrope24Light();
-        margin-top: 61.5px;
-        text-align: right;
-        max-width: 600px;
-        align-self: flex-end
-    }
-
-    .findOutMoreBtn{
-        @include syne14();
-        margin-top: 88px;
-        width: 225px;
-        height: 64px;
-        background: #FFFFFF;
-        border-radius: 500px;
-        border: none;
-
-    }
-
-    @include mobileMax768p(){
-        height: 80vh;
-        margin-bottom: 150px;
-        h2 {
-            @include manrope40();
-            &:first-of-type{
-                text-align: center;
+        .card{
+            padding: 16px;
+            border-width: 2px;
+            border-color: var(--accent-color);
+            border-style: solid;
+            position: relative;
+            margin: 5px;
+            overflow: hidden;
+            background-color: var(--main-color);
+            max-width: 380px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
+                        0 2px 2px rgba(0,0,0,0.1), 
+                        0 4px 4px rgba(0,0,0,0.1), 
+                        0 8px 8px rgba(0,0,0,0.1),
+                        0 16px 16px rgba(0,0,0,0.1);
+            img {
+                opacity: 1;
+                display: block;
+                backface-visibility: hidden;
+                width: 330px;
+                height: 330px;
+                object-fit: cover;
+                
             }
-            &:last-of-type{
+            h2 {
+                @include tul24Regular();
+                margin-top: 20px;
                 text-align: center;
+                color: var(--accent-color)
+            }
+            .reveal{
+                transform: translateY(100%);
+                transition: transform 500ms ease-in-out;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.75);
+                padding: 30px;
+                top : 20%;
+                left: -10px;
+                height: 80%;
+                width: 330px;
+                p{
+                    @include tul16Regular();
+                    position: relative;
+                    color: var(--accent-color)
+                } 
+                button{
+                    @include tul16Regular();
+                    position: absolute;
+                    left:8%;
+                    width: 84%;
+                    bottom:80px;
+                    height: 40px;
+                    padding: 0px;
+                    cursor: pointer;
+                    border: var(--accent-color);
+                    border-width: 2px;
+                    border-style: solid;
+                    color: var(--accent-color);
+                    background-color: var(--main-color);
+                } 
+                button:hover{
+                    color: var(--main-color);
+                    background-color: var(--accent-color);
+                }
             }
         }
-        p {
-            @include manrope18();
-            line-height: 24px;
-            text-align: center;
-            align-self: center;
+
+        .card:hover{
+            .reveal{
+                transform: translateY(0);
+                transition: transform 500ms ease-in-out;
+            }   
         }
-    }
+    } 
 }
-*/
+
