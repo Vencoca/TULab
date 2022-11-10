@@ -1,3 +1,4 @@
+/*
 //window.onload = window.onresize = ()=> { gsap.set('#map_cont', {}); }
 gsap.set('#scrollDist', {width:'100%', height:'500%'})
 gsap.set('#map_cont', {width:5379, height:2442, transformOrigin:'0 0'})
@@ -11,3 +12,4 @@ gsap.ticker.add( ()=> gsap.to('#map_cont', {duration:0.7, x:-gsap.getProperty('#
 
 //center the container's left/top position
 window.onload = window.onresize = ()=> { gsap.set('#map_cont', {left:innerWidth/2, top:innerHeight/2}); }
+*/
