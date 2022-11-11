@@ -1,7 +1,8 @@
 .technology {
     width: 100%;
     min-height: calc(100vh - 80px);
-    //background-color: cadetblue;
+    background: linear-gradient( rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.8));
+    
     .container{
         display: flex;
         justify-content: center;
