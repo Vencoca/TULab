@@ -48,6 +48,21 @@
     line-height: 45px;
 }
 
+
+//-----
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter/Inter-VariableFont_slnt,wght.ttf');
+}
+
+@mixin Inter16Regular{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
 //----------------
 @font-face {
     font-family: 'Manrope';

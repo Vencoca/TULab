@@ -14,6 +14,9 @@ links.forEach(a => {
     });
     a.addEventListener("click", e => {
       e.preventDefault();
+      if (document.getElementById("menu-btn").checked){
+        document.getElementById("menu-btn").click();
+      }
       gsap.to(window, {duration: 1, scrollTo: linkST.start, overwrite: "auto"});
     });
 });

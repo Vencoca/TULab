@@ -32,9 +32,10 @@
                 opacity: 1;
                 display: block;
                 backface-visibility: hidden;
-                width: 330px;
-                height: 330px;
+                max-width: 330px;
+                max-height: 330px;
                 object-fit: cover;
+                width: 100%;
                 
             }
             h2 {
@@ -52,9 +53,9 @@
                 top : 20%;
                 left: -10px;
                 height: 80%;
-                width: 330px;
+                max-width: 330px;
                 p{
-                    @include tul16Regular();
+                    @include Inter16Regular();
                     position: relative;
                     color: var(--accent-color)
                 } 

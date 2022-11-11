@@ -5,9 +5,18 @@
     justify-content: center;
     align-items: center;
     iframe{
-        filter: invert(.9) saturate(0.5) hue-rotate(145deg);
         border: 0;
-        width: 800px; 
-        height: 600px;
+        height: calc(100% - 32px);
+        padding-top: 16px;
+        padding-bottom: 16px;
+        aspect-ratio: calc(8/6);
+        max-width: 100%;
+    }
+    @media (max-width: 550px) {
+        iframe{
+            height: auto;
+            width: 100%;
+            scroll-behavior: unset;
+        }
     }
 }
