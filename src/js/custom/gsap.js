@@ -1,1 +1,1 @@
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, DrawSVGPlugin);
