@@ -1,30 +1,77 @@
 .footer {
     width: 100%;
-    height: 113px;    
-    // bottom: 0;
-    // padding-bottom: 300px;
-    // position: absolute;
-    // bottom: 0;
-    // height: 300px;
-    // box-sizing: border-box;
     overflow: hidden;
     border-top: 1px solid rgba(83, 83, 83, 0.1);;
     background-color: var(--main-color);
-    height: 90px; 
-    
+    min-height: 120px; 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--white-color);
 
-    .footerContainer {
-        width: 100%;
-        height: 100%;
-        position: relative;
+    .social{
         display: flex; 
+        justify-content: space-around;
+        padding-bottom: 10px;
+        img{
+            height: 30px;
+            filter: invert(1);
+        }
+
+    }
+
+    .kontakt {
+        img{
+            height: 1em;
+            filter: invert(1);
+            vertical-align: bottom;
+        }
+        p {
+            
+        }
+
+        a {
+            @include Inter14Regular();
+            text-decoration: none; 
+            color: var(--white-color);
+            padding: 1px;
+        }
+    }
+
+    h4{
+        @include Inter16Regular();
+        color:var(--accent-color);
+        text-decoration: underline;
+        padding-bottom: 4px;
+    }
+    p{
+        @include Inter14Regular();
+        color:var(--white-color);
+        padding: 1px;
+    }
+
+    @media (max-width: 500px) {
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        div{
+            padding: 5px;
+        }
+
+        .adresa {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .kontakt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
-    
-    h5 {
-        @include manrope14();
-        color: var(--white-color)
-    }
+
 }

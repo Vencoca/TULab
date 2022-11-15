@@ -59,22 +59,22 @@
         background-image: url("images/content/LOGOTUL.png");
         transform: rotateY( 80deg) translateZ(430px); }
       .carousel__face:nth-child(4) {
-        background-image: url("images/content/LOGOPRUSA.png");
+        background-image: url("images/content/LOGOSTEINEL.png");
         transform: rotateY(120deg) translateZ(430px); }
       .carousel__face:nth-child(5) { 
-        background-image: url("images/content/LOGOPM.png");
+        background-image: url("images/content/LOGOPRUSA.png");
        transform: rotateY(160deg) translateZ(430px); }
       .carousel__face:nth-child(6) { 
-        background-image: url("images/content/LOGOTUL.png");
+        background-image: url("images/content/LOGOPM.png");
        transform: rotateY(200deg) translateZ(430px); }
       .carousel__face:nth-child(7) { 
-        background-image: url("images/content/LOGOPRUSA.png");
+        background-image: url("images/content/LOGOTUL.png");
        transform: rotateY(240deg) translateZ(430px); }
       .carousel__face:nth-child(8) {
-        background-image: url("images/content/LOGOPM.png");
+        background-image: url("images/content/LOGOSTEINEL.png");
         transform: rotateY(280deg) translateZ(430px); }
       .carousel__face:nth-child(9) {
-        background-image: url("images/content/LOGOTUL.png");
+        background-image: url();
         transform: rotateY(320deg) translateZ(430px); }
       
       @keyframes rotate360 {
