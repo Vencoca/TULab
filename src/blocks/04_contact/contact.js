@@ -3,7 +3,7 @@
     {scrollTrigger:{
       trigger:'#scrollDist',
       scrub: true,
-      pin: '#contact',
+      pin: '#map',
       start:'top 80px', 
       end:"+=200%", 
       ease: 'none',

@@ -4,12 +4,12 @@ links.forEach(a => {
     let element = document.querySelector(a.getAttribute("href"));
     let linkST = ScrollTrigger.create({
                     trigger: element,
-                    start: "top 80px"
+                    start: "top 81px"
                   });
     ScrollTrigger.create({
         trigger: element,
-        start: "top 81px",
-        end: "bottom 81px",
+        start: "top bottom",
+        end: "bottom bottom",
         onToggle: self => self.isActive && setActive(a)
     });
     a.addEventListener("click", e => {

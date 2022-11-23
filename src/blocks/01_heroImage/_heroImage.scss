@@ -12,6 +12,7 @@
         align-items: center;
     }
 
+
     h1 {
         padding-top: 5px;
         @include tul72();
@@ -19,6 +20,14 @@
         text-align: center;
         text-shadow: 4px 4px 2px var(--main-color);
         position: relative;
+    }
+
+    h2 {
+        @include tul40Regular();
+        position: absolute;
+        color: white;
+        text-shadow: 4px 4px 2px var(--main-color);
+        bottom: 10px;
     }
     
     @include mobileMax768p(){

@@ -10,13 +10,22 @@
     justify-content: space-around;
     color: var(--white-color);
 
+    h5{
+        @include tul16Regular();
+    }
+
     .social{
         display: flex; 
         justify-content: space-around;
         padding-bottom: 10px;
+        gap: 10px;
         img{
             height: 30px;
             filter: invert(1);
+        }
+
+        img:hover{
+            filter: invert(84%) sepia(81%) saturate(4479%) hue-rotate(124deg) brightness(103%) contrast(92%);
         }
 
     }
@@ -26,9 +35,6 @@
             height: 1em;
             filter: invert(1);
             vertical-align: bottom;
-        }
-        p {
-            
         }
 
         a {

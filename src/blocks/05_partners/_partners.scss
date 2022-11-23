@@ -42,6 +42,15 @@
         border-color: black;
         border-style: solid;
       }
+
+      a{
+        width: 100%;
+        height: 100%;
+      }
+
+      .carousel__face:hover{
+        box-shadow:inset 0 0 0 2000px #5948ad55;
+      }
       
       span {
         margin: auto;
