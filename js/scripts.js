@@ -5598,12 +5598,22 @@ return PhotoSwipeUI_Default;
 
 
 
+a = document.getElementById("arrow")
+a.addEventListener("click", e => {
+    let element = document.querySelector(a.getAttribute("href"));
+    let linkST = ScrollTrigger.create({
+                    trigger: element,
+                    start: "top 81px"
+                  });
+    e.preventDefault();
+    gsap.to(window, {duration: 1, scrollTo: linkST.start, overwrite: "auto"});
+  });
   //tween the svg path + circle
   gsap.timeline(
     {scrollTrigger:{
       trigger:'#scrollDist',
       scrub: true,
-      pin: '#contact',
+      pin: '#map',
       start:'top 80px', 
       end:"+=200%", 
       ease: 'none',
@@ -5633,7 +5643,7 @@ links.forEach(a => {
 
                     trigger: element,
 
-                    start: "top 80px"
+                    start: "top 81px"
 
                   });
 
@@ -5641,9 +5651,9 @@ links.forEach(a => {
 
         trigger: element,
 
-        start: "top 81px",
+        start: "top bottom",
 
-        end: "bottom 81px",
+        end: "bottom bottom",
 
         onToggle: self => self.isActive && setActive(a)
 

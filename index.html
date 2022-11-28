@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<title>TULab</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="images/content/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/content/favicon/favicon-32x32.png">
@@ -20,17 +21,18 @@
 
 	<header id="navigation" class="header" :class="{'scrolled-nav' : scrolledNav}">
 		<nav>
-			<a href="#homee"><img src="@/../images/logo.svg" alt="" srcset=""></a>
+			<a href="#home"><img src="@/../images/logo.svg" alt="" srcset=""></a>
 			<input class="menu-btn" type="checkbox" id="menu-btn" />
 			<label class="menu-icon" for="menu-btn">
 				<span class="navicon"></span>
 			</label>
 			<ul class="menu">
-				<li><a class="link active" href="#home">Domů</a></li>
+				<li><a class="link" href="#about">O nás</a></li>
 				<li><a class="link" href="#technology">Technologie</a></li>
 				<li><a class="link" href="#calendar">Kalendář</a></li>
-				<li><a class="link" href="#contact">Kontakt</a></li>
+				<li><a class="link" href="#map">Mapa</a></li>
 				<li><a class="link" href="#partners">Partneři</a></li>
+				<li><a class="link" href="#contact">Kontakt</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -42,6 +44,23 @@
 	<section id="home" class="hero">
 		<div class="container">
 			<h1>Vítejte na stránkách otevřené laboratoře TUL</h1>
+			<a id="arrow" href="#about">
+				<h2> ↓ </h2>
+			</a>
+		</div>
+	</section>
+
+	<section class="about" id="about">
+		<div class="container">
+			<h1>O nás</h1>
+			<p> Jsme dílna otevřená napříč fakultami studentům a zaměstnancům TUL s cílem umožnit
+				přístup k technologiím, které mohou být jinak těžko dostupné. </p>
+			<br>
+			<p>
+				Stěžejní myšlenkou TULΔbu je dát těm, kdo mají zájem, možnost tvořit a&nbspučit se. Fungujeme
+				proto na principu od studentů pro studenty tak, aby měly příležitost se posouvat obě strany a
+				nikdo, ani úplný začátečník, se nemusel bát přijít a do něčeho se pustit.
+			</p>
 		</div>
 	</section>
 
@@ -51,7 +70,10 @@
 				<h2>Laser</h2>
 				<img src="images/content/laser.png"></img>
 				<div class="reveal">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p>
+					<p>Thunder Laser je vhodný pro širokou škálu projektů. Na laseru je možné řezat i gravírovat
+						např. papír, dřevo, překližku, textil, kůži, korek, plexisklo a další. Pracovní plocha má
+						rozměry 900&nbsp×&nbsp600&nbspmm, výška osy Z je až 230 mm. Lze pracovat v rastrovém, vektorovém i
+						kombinovaném módu.</p>
 					<button>Zjisti více</button>
 				</div>
 			</div>
@@ -59,7 +81,10 @@
 				<h2>3D Tisk</h2>
 				<img src="images/content/tisk.png"></img>
 				<div class="reveal">
-					<p>Lorem imodo ligula eget do parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p>
+					<p>Disponujeme tiskárnami využívající technolgií SLS, SLA a FDM. Celkem se v prostoru laboratoře nachází 10 tiskáren z nichž
+						nejzastoupenější je Original Prusa i3 MK3S+, který je vhodný na veškerý FDM tisk. Pracovní prostor MK3S+ je 250×210×210&nbspmm.
+						Pokud je potřeba větší pracovní plocha je možné využít Trilab DeltiQ Plus nebo Creality CR-10 Max.
+					</p>
 					<button>Zjisti více</button>
 				</div>
 			</div>
@@ -67,7 +92,9 @@
 				<h2>Vyšívání</h2>
 				<img src="images/content/sici.png"></img>
 				<div class="reveal">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p>
+					<p>Brother INNOV-is V5LE je nejmodernější šicí, vyšívací a quiltovací stroj. Má 3 velikosti
+						vyšívacích ploch, největší je 300&nbspx&nbsp200&nbspmm. Data lze připravit v PE&nbsp–&nbspDesign, zpracovává jak
+						vektorovou grafiku, tak i formáty .png a .jpeg. Mimo vyšívání má i režim ručního šití.</p>
 					<button>Zjisti více</button>
 				</div>
 			</div>
@@ -75,7 +102,10 @@
 				<h2>CNC</h2>
 				<img src="images/content/cnc.png"></img>
 				<div class="reveal">
-					<p>Lorem ipsum dolor sitit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p>
+					<p>CNC obráběcí centrum s pevným pracovním stolem o rozměrech pracovní plochy 800&nbspx&nbsp
+						1477&nbspx&nbsp145&nbspmm. Systém je určen pro přesné, efektivní obrábění široké škály materiálů na
+						bázi dřeva, plastů, textilu, hliníku, mosazi, uhlíkových kompozitů, sendvičových desek,
+						pěnových materiálů a dalších.</p>
 					<button>Zjisti více</button>
 				</div>
 			</div>
@@ -83,7 +113,10 @@
 				<h2>3D Sken</h2>
 				<img src="images/content/skener.png"></img>
 				<div class="reveal">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p>
+					<p>RangeVision Spectrum je víceúčelový 3D skener se skenovacím softwarem ScanCenter
+						NG.
+						EinScan Pro 2X Plus je přenosný a univerzální ruční 3D scanner pro výsledky s vysokým
+						rozlišením (skenovací software EXSCAN PRO, 3D skenování objektů od 1&nbspcm do 3&nbspm)</p>
 					<button>Zjisti více</button>
 				</div>
 			</div>
@@ -91,7 +124,9 @@
 				<h2>Ostatní</h2>
 				<img src="images/content/pila.png"></img>
 				<div class="reveal">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p>
+					<p>Máme také další ruzné nářadí a to kladiva, svěráky, paličky, štípačky, kombinačky, šroubováky, klíče, ráčny, voříšky, páčidla, sklíčidla, bity, nůžky, měřidla, úhelníky, pinzety, zkoušečky,
+						a také pily, nože, závitníky, dláta, vrtáky, sponkovačky, sekáče, vyražeče, nůžky, jehly, rašple, pilníky, kartáče,
+						a v neposlední řadě vrtačky, pily, brusky, frézky, horkovzdušné i lepicí pistole, svítidla.</p>
 					<button>Zjisti více</button>
 				</div>
 			</div>
@@ -99,10 +134,11 @@
 	</section>
 
 	<section id="calendar" class="calendar">
-		<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%235948ad&ctz=Europe%2FPrague&showNav=1&showCalendars=0&showPrint=0&showTz=0&showTabs=0&mode=WEEK&showTitle=0&src=Y182MTQ4MmM0OWYzYjlmZjJhMWU0NDNhMGMxMzY5MzczMzhlYmQ2NzNlNGMyOTAyYjhlMDMwMDdlZDIzNzg4MzJiQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23B39DDB" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%235948ad&ctz=Europe%2FPrague&showNav=1&showCalendars=0&showPrint=0&showTz=0&showTabs=0&mode=WEEK&showTitle=0&src=pk917gap3oon4juh59cuub7icc@group.calendar.google.com&fbclid=IwAR3WoTaX7CJxIqR3O1HXdOL_GSlbMW08iEJScEJaThgRZnzL509RahJPmPc&color=%23B39DDB" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
 	</section>
 
-	<section id="contact" class="contact">
+	<section id="map" class="map">
 		<div id="scrollDist"></div>
 		<a href="https://goo.gl/maps/5r936AMybHKtrVUx5">
 			<div id="map_container">
@@ -134,21 +170,21 @@
 	<section id="partners" class="partners">
 		<div class="container">
 			<div class="carousel">
-				<div class="carousel__face"><span>1</span></div>
-				<div class="carousel__face"><span>2</span></div>
-				<div class="carousel__face"><span>3</span></div>
-				<div class="carousel__face"><span>4</span></div>
-				<div class="carousel__face"><span>5</span></div>
-				<div class="carousel__face"><span>6</span></div>
-				<div class="carousel__face"><span>7</span></div>
-				<div class="carousel__face"><span>8</span></div>
-				<div class="carousel__face"><span>9</span></div>
+				<div class="carousel__face"><a href="https://www.prusa3d.com/"></a></div>
+				<div class="carousel__face"><a href="https://www.filament-pm.cz/"></a></div>
+				<div class="carousel__face"><a href="https://www.tul.cz/"></a></div>
+				<div class="carousel__face"><a href="https://www.steinel.cz/"></a></div>
+				<div class="carousel__face"><a href="https://www.prusa3d.com/"></a></div>
+				<div class="carousel__face"><a href="https://www.filament-pm.cz/"></a></div>
+				<div class="carousel__face"><a href="https://www.tul.cz/"></a></div>
+				<div class="carousel__face"><a href="https://www.prusa3d.com/"></a></div>
+				<div class="carousel__face"><a href="https://www.tul.cz/"></a></div>
 			</div>
 		</div>
 
 	</section>
 
-	<section class="footer">
+	<section class="footer" id="contact">
 		<div class="left">
 			<div class="adresa">
 				<h4>Adresa</h4>
@@ -177,11 +213,11 @@
 		</div>
 	</section>
 
-	<script src="js/vendor/gsap.min.js"></script>
-	<script src="js/vendor/DrawSVGPlugin.min.js"></script>
-	<script src="js/vendor/MotionPathPlugin.min.js"></script>
-	<script src="js/vendor/ScrollTrigger.min.js"></script>
-	<script src="js/scripts.js?202211152726"></script>
+	<script type="text/js" src="js/vendor/gsap.min.js"></script>
+	<script type="text/js" src="js/vendor/DrawSVGPlugin.min.js"></script>
+	<script type="text/js" src="js/vendor/MotionPathPlugin.min.js"></script>
+	<script type="text/js" src="js/vendor/ScrollTrigger.min.js"></script>
+	<script src="js/scripts.js?202211281047"></script>
 </body>
 
 </html>
