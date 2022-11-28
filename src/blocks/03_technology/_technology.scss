@@ -60,6 +60,12 @@
                     position: relative;
                     color: var(--accent-color)
                 } 
+
+                ul, li{
+                    @include Inter16Regular();
+                    color: var(--accent-color)
+                }
+
                 button{
                     @include tul16Regular();
                     position: absolute;

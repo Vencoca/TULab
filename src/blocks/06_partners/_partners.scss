@@ -83,8 +83,10 @@
         background-image: url("images/content/LOGOSTEINEL.png");
         transform: rotateY(280deg) translateZ(430px); }
       .carousel__face:nth-child(9) {
-        background-image: url();
-        transform: rotateY(320deg) translateZ(430px); }
+        background-image: url("images/content/LOGOTULA.png");
+        transform: rotateY(320deg) translateZ(430px);
+        background-size: 60%;
+      }
       
       @keyframes rotate360 {
         from {
