@@ -1,0 +1,84 @@
+.cenik{
+    h1{
+        @include tul40Regular;
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    h3 {
+        @include tul24Regular;
+        text-align: center; 
+        margin: 0px; 
+        padding-top: 5px;
+    }
+
+    form{
+        @include tul16Regular;
+        input{
+            @include tul16Regular;
+        }
+        select{
+            @include tul16Regular;
+        }
+        
+    }
+
+
+    .output {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center; 
+        border-top: 1px solid; 
+        margin-bottom: 0px; 
+        padding-top: 10px;
+    }
+
+    .container_cenik{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        min-height: calc(100vh - 221px);
+    }
+    .form_wrap{
+        width: 100%;
+        max-width: 300px;
+        border: 2px solid;
+        margin: 20px;
+        background-color: white;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    form > *{
+        margin-bottom: 10px;
+    }
+
+    form p{
+        text-align: center;
+    }
+
+
+
+    #sla_price, #fdm_price, #laser_price{
+        padding-left: calc(300px/2 - 6rem);
+    }
+    body { margin: 0px}
+
+    @media (min-width: 1050px) {
+        h1 {
+            top:10%;
+            padding-top: 0px;
+        }   
+    }
+}

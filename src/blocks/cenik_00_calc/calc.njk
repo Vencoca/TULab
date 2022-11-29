@@ -1,0 +1,63 @@
+<section class="cenik">
+<h1>Ceník TULΔb</h1>
+    <div class="container_cenik">
+        <div class="form_wrap">
+            <h3>FDM tisk</h3>
+            <form>     
+                <label>Čas [hh:mm]</label>
+                <input id="fdm_time" type="time" value="00:00"/>
+                <label>Váha [g]</label>
+                <input id="fdm_weight" type="number" value="0"/>
+                <input id="fdm_calc" type="button" value="Kalkuluj!" onclick="fdm_calculate()"/>
+                <div class="output">
+                    <p>Cena:</p><p id = "fdm_price"></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form_wrap">
+            <h3>SLA tisk</h3>
+            <form>     
+                <label>Resin</label>
+                <select id="sla_resin" name="Resin">
+                    <option value="Clear">Clear</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Gray">Gray</option>
+                    <option value="Tough">Tough</option>
+                    <option value="Durable">Durable</option>
+                    <option value="High Temp">High Temp</option>
+                    <option value="Grey Pro">Grey Pro</option>
+                    <option value="ESD">ESD</option>
+                    <option value="Rigid">Rigid</option>
+                    <option value="Elastic">Elastic</option>
+                    <option value="Flexible">Flexible</option>
+                    <option value="BioMed">BioMed</option>
+                    <option value="Castable">Castable</option>
+                </select>
+                <label>Čas [hh:mm]</label>
+                <input id="sla_time" type="time" value="00:00"/>
+                <label>Objem [ml]</label>
+                <input id="sla_volume" type="number" value="0"/>
+                <input id="sla_calc" type="button" value="Kalkuluj!" onclick="sla_calculate()"/>
+                <div class="output">
+                    <p>Cena:</p><p id = "sla_price"></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form_wrap">
+            <h3>Laser</h3>
+            <form>     
+                <label>Čas [hh:mm]</label>
+                <input id="laser_time" type="time" value="00:00"/>
+                <label>Cena materiálu</label>
+                <input id="laser_material" type="number" value="0"/>
+                <input id="laser_calc" type="button" value="Kalkuluj!" onclick="laser_calculate()"/>
+                <div class="output">
+                    <p>Cena:</p><p id = "laser_price"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
