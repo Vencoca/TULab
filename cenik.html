@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>TULab</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="images/content/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/content/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/content/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/content/favicon/site.webmanifest">
+	<link rel="mask-icon" href="images/content/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+	<section class="background">
+		<video src="images/vid/technology.mp4" autoplay loop playsinline muted></video>
+	</section>
+
+	<section class="cenik">
+		<h1>Ceník TULΔb</h1>
+		<div class="container_cenik">
+			<div class="form_wrap">
+				<h3>FDM tisk</h3>
+				<form>
+					<label>Čas [hh:mm]</label>
+					<input id="fdm_time" type="time" value="00:00" />
+					<label>Váha [g]</label>
+					<input id="fdm_weight" type="number" value="0" />
+					<input id="fdm_calc" type="button" value="Kalkuluj!" onclick="fdm_calculate()" />
+					<div class="output">
+						<p>Cena:</p>
+						<p id="fdm_price"></p>
+					</div>
+				</form>
+			</div>
+
+			<div class="form_wrap">
+				<h3>SLA tisk</h3>
+				<form>
+					<label>Resin</label>
+					<select id="sla_resin" name="Resin">
+						<option value="Clear">Clear</option>
+						<option value="Black">Black</option>
+						<option value="White">White</option>
+						<option value="Gray">Gray</option>
+						<option value="Tough">Tough</option>
+						<option value="Durable">Durable</option>
+						<option value="High Temp">High Temp</option>
+						<option value="Grey Pro">Grey Pro</option>
+						<option value="ESD">ESD</option>
+						<option value="Rigid">Rigid</option>
+						<option value="Elastic">Elastic</option>
+						<option value="Flexible">Flexible</option>
+						<option value="BioMed">BioMed</option>
+						<option value="Castable">Castable</option>
+					</select>
+					<label>Čas [hh:mm]</label>
+					<input id="sla_time" type="time" value="00:00" />
+					<label>Objem [ml]</label>
+					<input id="sla_volume" type="number" value="0" />
+					<input id="sla_calc" type="button" value="Kalkuluj!" onclick="sla_calculate()" />
+					<div class="output">
+						<p>Cena:</p>
+						<p id="sla_price"></p>
+					</div>
+				</form>
+			</div>
+
+			<div class="form_wrap">
+				<h3>Laser</h3>
+				<form>
+					<label>Čas [hh:mm]</label>
+					<input id="laser_time" type="time" value="00:00" />
+					<label>Cena materiálu</label>
+					<input id="laser_material" type="number" value="0" />
+					<input id="laser_calc" type="button" value="Kalkuluj!" onclick="laser_calculate()" />
+					<div class="output">
+						<p>Cena:</p>
+						<p id="laser_price"></p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer" id="contact">
+		<div class="left">
+			<div class="adresa">
+				<h4>Adresa</h4>
+				<p>Suterén budovy A</p>
+				<p>Hálkova 6</p>
+				<p>Liberec 460 01</p>
+			</div>
+		</div>
+		<div class="middle">
+			<div class="social">
+				<a href="https://www.instagram.com/tulab_official/"><img src="@/../images/content/svg/instagram.svg" /></a>
+				<a href="https://www.facebook.com/people/tulab_official/100083199377110/"><img src="@/../images/content/svg/square-facebook.svg" /></a>
+				<a href="mailto:tulab@tul.cz"><img src="@/../images/content/svg/envelope-solid.svg" /></a>
+			</div>
+			<h5>© TULab 2022</h5>
+		</div>
+
+		<div class="right">
+			<div class="kontakt">
+				<h4>Dílnovedoucí</h4>
+				<p>Ing. Jan Koprnický, Ph.D.</p>
+				<a href="mailto:jan.koprnicky@tul.cz"><img src="@/../images/content/svg/envelope-solid.svg" /> jan.koprnicky@tul.cz</a>
+				<p>Ing. Lubomír Slavík, Ph.D.</p>
+				<a href="mailto:lubomir.slavik@tul.cz"><img src="@/../images/content/svg/envelope-solid.svg" /> lubomir.slavik@tul.cz</a>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/js" src="js/vendor/gsap.min.js"></script>
+	<script type="text/js" src="js/vendor/DrawSVGPlugin.min.js"></script>
+	<script type="text/js" src="js/vendor/MotionPathPlugin.min.js"></script>
+	<script type="text/js" src="js/vendor/ScrollTrigger.min.js"></script>
+	<script src="js/scripts.js?202211305222"></script>
+</body>
+
+</html>
