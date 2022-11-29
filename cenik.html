@@ -30,7 +30,9 @@
 				<h3>FDM tisk</h3>
 				<form>
 					<label>Čas [hh:mm]</label>
-					<input id="fdm_time" type="time" value="00:00" />
+					<div class="time_span">
+						<input id="fdm_h" type="number" value="0" min="0" step="1" />:<input id="fdm_m" value="0" type="number" min="0" max="59" step="1" />
+					</div>
 					<label>Váha [g]</label>
 					<input id="fdm_weight" type="number" value="0" />
 					<input id="fdm_calc" type="button" value="Kalkuluj!" onclick="fdm_calculate()" />
@@ -62,7 +64,9 @@
 						<option value="Castable">Castable</option>
 					</select>
 					<label>Čas [hh:mm]</label>
-					<input id="sla_time" type="time" value="00:00" />
+					<div class="time_span">
+						<input id="sla_h" type="number" value="0" min="0" step="1" />:<input id="sla_m" value="0" type="number" min="0" max="59" step="1" />
+					</div>
 					<label>Objem [ml]</label>
 					<input id="sla_volume" type="number" value="0" />
 					<input id="sla_calc" type="button" value="Kalkuluj!" onclick="sla_calculate()" />
@@ -77,7 +81,9 @@
 				<h3>Laser</h3>
 				<form>
 					<label>Čas [hh:mm]</label>
-					<input id="laser_time" type="time" value="00:00" />
+					<div class="time_span">
+						<input id="laser_h" type="number" value="0" min="0" step="1" />:<input id="laser_m" value="0" type="number" min="0" max="59" step="1" />
+					</div>
 					<label>Cena materiálu</label>
 					<input id="laser_material" type="number" value="0" />
 					<input id="laser_calc" type="button" value="Kalkuluj!" onclick="laser_calculate()" />
@@ -123,7 +129,7 @@
 	<script type="text/js" src="js/vendor/DrawSVGPlugin.min.js"></script>
 	<script type="text/js" src="js/vendor/MotionPathPlugin.min.js"></script>
 	<script type="text/js" src="js/vendor/ScrollTrigger.min.js"></script>
-	<script src="js/scripts.js?202211305222"></script>
+	<script src="js/scripts.js?202211303813"></script>
 </body>
 
 </html>
