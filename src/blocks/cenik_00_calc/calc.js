@@ -18,12 +18,12 @@ function sla_calculate(){
     const power_consumption = 0.0060;
     const hourly_rate = 40;
     const handling_fee = 100;
+    const hours = document.getElementById("sla_h");
+    const minutes = document.getElementById("sla_m");
     const resin = document.getElementById("sla_resin");
     const volume = document.getElementById("sla_volume");
-    const time = document.getElementById("sla_time");
     const output = document.getElementById("sla_price");
-    let time_values = time.value.split(':');
-    let time_hours = parseInt(time_values[0], 10) + parseInt(time_values[1], 10)/60
+    let time_hours = parseInt(hours.value, 10) + parseInt(minutes.value, 10)/60 
     output.textContent = Math.round(map_sla_resin.get(resin.value)*volume.value + time_hours*hourly_rate+handling_fee + time_hours*power_consumption*electricity_price) + " Kč";
 }
 
@@ -32,10 +32,10 @@ function fdm_calculate(){
     const weight = document.getElementById("fdm_weight");
     const weight_price = 6;
     const hourly_rate = 30;
-    const time = document.getElementById("fdm_time");
+    const hours = document.getElementById("fdm_h");
+    const minutes = document.getElementById("fdm_m");
     const output = document.getElementById("fdm_price");
-    let time_values = time.value.split(':');
-    let time_hours = parseInt(time_values[0], 10) + parseInt(time_values[1], 10)/60 
+    let time_hours = parseInt(hours.value, 10) + parseInt(minutes.value, 10)/60 
     output.textContent = Math.round(time_hours*hourly_rate + weight_price*weight.value+handling_fee) + " Kč"
 }
 
@@ -43,9 +43,9 @@ function laser_calculate(){
     const handling_fee = 50;
     const material = document.getElementById("laser_material");
     const hourly_rate = 360;
-    const time = document.getElementById("laser_time");
+    const hours = document.getElementById("laser_h");
+    const minutes = document.getElementById("laser_m");
     const output = document.getElementById("laser_price");
-    let time_values = time.value.split(':');
-    let time_hours = parseInt(time_values[0], 10) + parseInt(time_values[1], 10)/60 
+    let time_hours = parseInt(hours.value, 10) + parseInt(minutes.value, 10)/60 
     output.textContent = Math.round(time_hours*hourly_rate + parseInt(material.value,10) + handling_fee) + " Kč"
 }

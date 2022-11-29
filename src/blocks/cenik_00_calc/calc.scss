@@ -17,6 +17,13 @@
         padding-top: 5px;
     }
 
+    .time_span{
+        display: flex;
+        input{
+            width: 50%
+        }
+    }
+
     form{
         @include tul16Regular;
         input{
