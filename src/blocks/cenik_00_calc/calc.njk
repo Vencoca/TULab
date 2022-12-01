@@ -3,19 +3,50 @@
     <div class="container_cenik">
         <div class="form_wrap">
             <h3>FDM tisk</h3>
-            <form>     
+            <form>
+                <label>Fillament</label>
+                <select id="fdm_fillament" name="Fillament">
+                    <option value="ASA_spectrum">ASA Spectrum</option>
+                    <option value="PETG_generic">PETG Generic</option>
+                    <option value="PETG_pm">PETG PM</option>
+                    <option value="PETG_prusa">PETG Prusa</option>
+                    <option value="PETG_spectrum">PETG Spectrum</option>
+                    <option value="PLA_ekoMB">PLA EkoMB</option>
+                    <option value="PLA_extrafill">PLA Extrafill</option>
+                    <option value="PLA_generic">PLA Generic</option>
+                    <option value="PLA_pm">PLA PM</option>
+                    <option value="PLA_prusa">PLA Prusa</option>
+                    <option value="PLA+PM">PLA + PM</option>
+                </select>
+                <label>Váha [g]</label>
+                <input id="fdm_weight" type="number" value="0"/>
                 <label>Čas [hh:mm]</label>
                 <div class="time_span">
                     <input id="fdm_h" type="number" value="0" min="0" step="1" />:<input id="fdm_m" value= "0" type="number" min="0" max="59" step="1" />
                 </div>
-                <label>Váha [g]</label>
-                <input id="fdm_weight" type="number" value="0"/>
                 <input id="fdm_calc" type="button" value="Kalkuluj!" onclick="fdm_calculate()"/>
                 <div class="output">
                     <p>Cena:</p><p id = "fdm_price"></p>
                 </div>
             </form>
         </div>
+
+        <div class="form_wrap">
+            <h3>Laser</h3>
+            <form>     
+                <label>Cena materiálu</label>
+                <input id="laser_material" type="number" value="0"/>
+                <label>Čas [hh:mm]</label>
+                <div class="time_span">
+                    <input id="laser_h" type="number" value="0" min="0" step="1" />:<input id="laser_m" value= "0" type="number" min="0" max="59" step="1" />
+                </div>
+                <input id="laser_calc" type="button" value="Kalkuluj!" onclick="laser_calculate()"/>
+                <div class="output">
+                    <p>Cena:</p><p id = "laser_price"></p>
+                </div>
+            </form>
+        </div>
+
 
         <div class="form_wrap">
             <h3>SLA tisk</h3>
@@ -37,31 +68,15 @@
                     <option value="BioMed">BioMed</option>
                     <option value="Castable">Castable</option>
                 </select>
+                <label>Objem [ml]</label>
+                <input id="sla_volume" type="number" value="0"/>
                 <label>Čas [hh:mm]</label>
                 <div class="time_span">
                     <input id="sla_h" type="number" value="0" min="0" step="1" />:<input id="sla_m" value= "0" type="number" min="0" max="59" step="1" />
                 </div>
-                <label>Objem [ml]</label>
-                <input id="sla_volume" type="number" value="0"/>
                 <input id="sla_calc" type="button" value="Kalkuluj!" onclick="sla_calculate()"/>
                 <div class="output">
                     <p>Cena:</p><p id = "sla_price"></p>
-                </div>
-            </form>
-        </div>
-
-        <div class="form_wrap">
-            <h3>Laser</h3>
-            <form>     
-                <label>Čas [hh:mm]</label>
-                <div class="time_span">
-                    <input id="laser_h" type="number" value="0" min="0" step="1" />:<input id="laser_m" value= "0" type="number" min="0" max="59" step="1" />
-                </div>
-                <label>Cena materiálu</label>
-                <input id="laser_material" type="number" value="0"/>
-                <input id="laser_calc" type="button" value="Kalkuluj!" onclick="laser_calculate()"/>
-                <div class="output">
-                    <p>Cena:</p><p id = "laser_price"></p>
                 </div>
             </form>
         </div>

@@ -28,15 +28,27 @@ function sla_calculate(){
 }
 
 function fdm_calculate(){
-    const handling_fee = 50;
+    const map_fdm_fillament = new Map();
+    map_fdm_fillament.set('ASA_spectrum', 0.700);
+    map_fdm_fillament.set('PETG_generic', 0.600);
+    map_fdm_fillament.set('PETG_pm', 0.660);
+    map_fdm_fillament.set('PETG_prusa', 0.600);
+    map_fdm_fillament.set('PETG_spectrum', 0.450);
+    map_fdm_fillament.set('PLA_ekoMB', 0.450);
+    map_fdm_fillament.set('PLA_extrafill', 0.600);
+    map_fdm_fillament.set('PLA_generic', 0.600);
+    map_fdm_fillament.set('PLA_pm', 0.660);
+    map_fdm_fillament.set('PLA_prusa', 0.600);
+    map_fdm_fillament.set('PLA+PM', 0.600);
+    const handling_fee = 30;
     const weight = document.getElementById("fdm_weight");
-    const weight_price = 6;
     const hourly_rate = 30;
+    const fillament = document.getElementById("fdm_fillament");
     const hours = document.getElementById("fdm_h");
     const minutes = document.getElementById("fdm_m");
     const output = document.getElementById("fdm_price");
     let time_hours = parseInt(hours.value, 10) + parseInt(minutes.value, 10)/60 
-    output.textContent = Math.round(time_hours*hourly_rate + weight_price*weight.value+handling_fee) + " Kč"
+    output.textContent = Math.round(time_hours*hourly_rate + map_fdm_fillament.get(fillament.value)*weight.value+handling_fee) + " Kč"
 }
 
 function laser_calculate(){
